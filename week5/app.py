@@ -3,7 +3,7 @@ import requests
 
 
 try:
-    response = requests.get('https://randomuser.me/api/?results=3&nat=us')
+    response = requests.get('https://randomuser.me/api/?results=10&nat=us')
     
     response_to_json = response.json()
 
