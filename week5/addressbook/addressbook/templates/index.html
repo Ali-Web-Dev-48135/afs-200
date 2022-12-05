@@ -21,7 +21,7 @@
         {% for user in users %}
             <div class="card">
                 <div class="photo"><img src="{{user.photoUrl}}"alt="{{user.firstName}}"></div>
-                <div class="name">{{user.firstName}}</div>
+                <div class="name">{{user.firstName}} {{user.lastName}}</div>
                 <div class="phone">{{user.phoneNumber}}</div>
                 <div class="emal">{{user.emailAddress}}</div>
             </div> 

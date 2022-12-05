@@ -8,7 +8,7 @@ class FetchUsers():
     #Handles http request to fetch the 25 users.
     def fetch_users_from_api(self):
         try:
-            response = requests.get('https://randomuser.me/api/?results=5&nat=us')
+            response = requests.get('https://randomuser.me/api/?results=25&nat=us')
             
             
             response.raise_for_status()
