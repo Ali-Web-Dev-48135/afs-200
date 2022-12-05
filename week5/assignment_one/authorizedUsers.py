@@ -1,4 +1,5 @@
 import users
+#Updated Code For Re mastery
 class AuthorizedUsers(users.User):
     
     def __init__(self):

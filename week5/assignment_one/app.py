@@ -2,7 +2,7 @@ import authorizedUsers
 import users
 import requests
 
-
+#Updated Code For Re mastery
 try:
     response = requests.get('https://randomuser.me/api/?results=10&nat=us')
     

@@ -1,5 +1,3 @@
-import requests
-
 class Contact():
     def __init__(self, firstName, lastName, emailAddress, phoneNumber, photoUrl):
         self.firstName = firstName
@@ -9,18 +7,18 @@ class Contact():
         self.photoUrl = photoUrl
 
     @property
-    def get_firstName(self):
+    def getFirstName(self):
         return self.firstName
     
-    @get_firstName.setter
+    @getFirstName.setter
     def set_firstName(self, value):
         self.firstName = value
     
     @property
-    def get_lastName(self):
+    def getLastName(self):
         return self.lastName
     
-    @get_lastName.setter
+    @getLastName.setter
     def set_lastName(self, value):
         self.lastName = value
     
@@ -28,7 +26,7 @@ class Contact():
     def get_emailAddress(self):
         return self.emailAddress
 
-    @get_emailAddress.settter
+    @get_emailAddress.setter
     def set_emailAddress(self, value):
         self.emailAddress = value
     
@@ -40,11 +38,13 @@ class Contact():
     def set_photoUrl(self, value):
         self.photoUrl = value
 
-    def __str__(self):
-        return f"{self.emailAddress}"
+    # def __str__(self):
+    #     return f"{self.firstName} {self.emailAddress}"
 
-    def __repr__(self):
-        return "FIX THIS HERE"
+    # def __repr__(self):
+    #     return f"{self.firstName} {self.emailAddress}"
+
+
 
 class AddressBook():
     def __init__(self):
@@ -58,11 +58,12 @@ class AddressBook():
     
     def findAllMatching(self,searchStr):
         results = []
+        print('FINDALLMATCHING')
         for address in self.addresses:
             
-            if address.getFirstName().lower().startswith(searchStr.lower()) or address.getLastName().lower().startswith(searchStr.lower()):
+            if address.getFirstName.lower().startswith(searchStr.lower()) or address.getLastName.lower().startswith(searchStr.lower()):
                 results.append(address)
-                
+        print(results)
         return results
     
    

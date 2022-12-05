@@ -11,22 +11,21 @@
     <div class="search-wrapper">
         <form action="http://127.0.0.1:5000/search" method="POST">
             <label for="search">Search Address Book</label><br>
-            <input type="search" id="search" name="search">
+            <input type="search" id="user_name" name="user_name">
             <button type="submit">Search</button>
             <button onclick="location.href='/'">Clear Results</button>
         </form>
         
     </div>
     <div class="rolodex">
-        <!-- 
-		<div class="card">
-            <div class="photo"><img src="photo.jpg" alt=""></div>
-            <div class="name">Your Name</div>
-            <div class="phone">555-555-5555</div>
-            <div class="emal">email@gmail.com</div>
-        </div> 
-		-->
-                
+        {% for user in users %}
+            <div class="card">
+                <div class="photo"><img src="{{user.photoUrl}}"alt="{{user.firstName}}"></div>
+                <div class="name">{{user.firstName}}</div>
+                <div class="phone">{{user.phoneNumber}}</div>
+                <div class="emal">{{user.emailAddress}}</div>
+            </div> 
+        {%endfor%}
     </div>
 </body>
 </html>
