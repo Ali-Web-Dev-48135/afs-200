@@ -38,14 +38,6 @@ class Contact():
     def set_photoUrl(self, value):
         self.photoUrl = value
 
-    # def __str__(self):
-    #     return f"{self.firstName} {self.emailAddress}"
-
-    # def __repr__(self):
-    #     return f"{self.firstName} {self.emailAddress}"
-
-
-
 class AddressBook():
     def __init__(self):
         self.addresses = []
@@ -63,7 +55,6 @@ class AddressBook():
             
             if address.getFirstName.lower().startswith(searchStr.lower()) or address.getLastName.lower().startswith(searchStr.lower()):
                 results.append(address)
-        print(results)
         return results
     
    
