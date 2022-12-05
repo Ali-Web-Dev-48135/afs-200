@@ -96,3 +96,6 @@ class User:
     @get_pictureThumbnail.setter
     def set_pictureThumbnail(self, value):
         self.pictureThumbnail = value
+    
+    def __str__(self):
+        print(f"{self.firstName} {self.lastName} {self.email}")
