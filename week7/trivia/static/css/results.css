@@ -1,0 +1,41 @@
+.header
+{
+    font-weight: bold;
+    padding: 10px 10px;
+    font-size: 2rem;
+}
+
+.results-ul
+{
+    padding: 10px 0 0 20px;
+}
+
+.results-ul li
+{
+    font-size: 1.5rem;
+}
+
+.correct
+{
+    margin-top: 10px;
+}
+
+.incorrect-title
+{
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.home-tag
+{
+    text-decoration: none;
+    outline: 3px solid black;
+    border-radius: 5px;
+    width: 10rem;
+    padding: 5px 10px;
+}
+
+.home-tag:hover 
+{
+    background-color: lightgreen;
+}

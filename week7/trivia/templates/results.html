@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{{ url_for('static', filename='css/results.css') }}" rel="stylesheet" type="text/css" />
+    <title>Quiz With Flask</title>
+</head>
+<body>
+    <header class="header">You got the following questions correct: </header>
+    <div class="correct">
+        <ul class="results-ul">
+        {% for correctanswer in correct %}
+            <li>
+                <p>{{correctanswer.question}}</p>
+                <p>- Correctly Answered: {{correctanswer.correctAnswer}}</p>
+            </li>
+        {%endfor%}
+        </ul>
+    </div>
+    <p class="incorrect-title">You got the following questions incorrect: </p>
+    <div class="incorrect">
+        <ul class="results-ul">
+        {% for incorrectanswer in incorrect %}
+            <li>
+                <p>{{incorrectanswer.question}}</p>
+                <p>-Correct Answer Is: {{incorrectanswer.correctAnswer}}</p>
+            </li>
+        {%endfor%}
+        </ul>
+    </div>
+    <a class="home-tag" href="http://127.0.0.1:5000">Play Again?</a>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet" type="text/css" />
+    <title>Quiz With Flask</title>
+</head>
+<body>
+    <header class="header">
+        <h1>Test Your Knowledge</h1>
+    </header>
+    <div class="quiz-wrapper">
+        <form action="http://127.0.0.1:5000/score" method="POST" class="form">
+            <div class="question-wrapper">
+                {% for question in questions %} 
+                    <div class="question">
+                        <p class="question-p">{{question.question}}</p>
+                    </div>
+                    {% for possibleAnswer in question.getShuffledAnswers() %}
+                    <input class="input-answer-option" type="radio" name="{{question.id}}" value="{{possibleAnswer}}" id="{{possibleAnswer}}"/>
+                    <label for="{{question.id}}" class="label-answer-option">{{possibleAnswer}}</label>    
+                    {%endfor%}
+                {%endfor%}
+            </div>
+            <button class="btn" type="submit">Score</button>
+        </form>    
+    </div>
+</body>
+</html>

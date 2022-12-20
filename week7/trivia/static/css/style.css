@@ -1,0 +1,54 @@
+.header
+{
+    outline: 3px solid black;
+    padding: 10px 0px 0px 10px;
+    background: lightcoral;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 50px;
+}
+
+.quiz-wrapper
+{
+    margin-top: 10rem;
+    margin-left: 10px;
+}
+
+.question-p
+{
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.input-answer-option
+{
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.label-answer-option
+{
+    font-size: 1.3rem;
+
+}
+
+.btn
+{
+    margin-top: 5rem;
+    width: 10rem;
+    padding: 10px 0;
+    cursor: pointer;
+    background-color: white;
+    background-image: linear-gradient(to right, lightgreen, white);
+    border-radius: 5px;
+    font-size: 1.2rem;
+}
+
+.btn:hover
+{
+    background-image: none;
+    background-color: lightgreen;
+}
